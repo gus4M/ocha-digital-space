@@ -57,19 +57,20 @@ function ServicesPage() {
   return (
     <div className="relative pt-32">
       {/* VIDEO BACKGROUND */}
-      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div className="pointer-events-none fixed inset-0 overflow-hidden" style={{ zIndex: 0 }}>
         <video
           src={servicesBgVideo}
           autoPlay
           loop
           muted
           playsInline
-          className="size-full object-cover opacity-30"
+          className="absolute inset-0 size-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95" />
-        <div className="absolute inset-0 bg-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/75 to-background/95" />
       </div>
 
+      {/* CONTENT WRAPPER */}
+      <div className="relative" style={{ zIndex: 1 }}>
       {/* HEADER */}
       <section className="px-6 pb-16">
         <div className="mx-auto max-w-7xl text-center">
