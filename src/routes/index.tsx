@@ -161,20 +161,20 @@ function HomePage() {
             {services.map((s) => (
               <article
                 key={s.title}
-                className="dashboard-border group bg-panel/40 p-7 transition-all duration-300 hover:bg-brand/5"
+                className="dashboard-border group bg-panel/40 p-8 transition-all duration-300 hover:bg-brand/5"
               >
-                <div className="mb-5 inline-flex size-12 items-center justify-center rounded border border-brand/30 bg-brand/10 text-brand transition-transform group-hover:scale-110">
-                  <s.icon className="size-5" />
+                <div className="mb-6 inline-flex size-14 items-center justify-center rounded border border-brand/30 bg-brand/10 text-brand transition-transform group-hover:scale-110">
+                  <s.icon className="size-6" />
                 </div>
-                <h3 className="mb-3 text-lg font-bold text-brand-deep">{s.title}</h3>
-                <p className="mb-5 text-sm leading-relaxed text-foreground/60">
+                <h3 className="mb-4 text-2xl font-bold text-brand-deep">{s.title}</h3>
+                <p className="mb-6 text-base leading-relaxed text-foreground/70">
                   {s.description}
                 </p>
                 <Link
                   to="/servicos"
-                  className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-brand transition-colors hover:text-brand-deep"
+                  className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-brand transition-colors hover:text-brand-deep"
                 >
-                  Saiba Mais <ArrowRight className="size-3" />
+                  Saiba Mais <ArrowRight className="size-3.5" />
                 </Link>
               </article>
             ))}
