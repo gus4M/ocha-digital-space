@@ -144,7 +144,6 @@ function ServicesPage() {
           </Link>
         </div>
       </section>
-      </div>
     </div>
   );
 }
