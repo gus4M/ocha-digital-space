@@ -55,9 +55,9 @@ const services = [
 
 function ServicesPage() {
   return (
-    <div className="relative isolate pt-32">
+    <div className="relative pt-32">
       {/* VIDEO BACKGROUND */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div className="pointer-events-none fixed inset-0 overflow-hidden" style={{ zIndex: 0 }}>
         <video
           src={servicesBgVideo}
           autoPlay
@@ -69,6 +69,8 @@ function ServicesPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/75 to-background/95" />
       </div>
 
+      {/* CONTENT WRAPPER */}
+      <div className="relative" style={{ zIndex: 1 }}>
       {/* HEADER */}
       <section className="px-6 pb-16">
         <div className="mx-auto max-w-7xl text-center">
@@ -144,6 +146,7 @@ function ServicesPage() {
           </Link>
         </div>
       </section>
+      </div>
     </div>
   );
 }
