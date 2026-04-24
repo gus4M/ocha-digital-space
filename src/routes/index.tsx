@@ -1,5 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Globe, Rocket, Code2, Wrench, CheckCircle2 } from "lucide-react";
+import {
+  ArrowRight,
+  Globe,
+  Rocket,
+  Code2,
+  Wrench,
+  GraduationCap,
+  Briefcase,
+  Target,
+  Cpu,
+  Wallet,
+} from "lucide-react";
 import heroBg from "../assets/hero-bg.jpg";
 
 export const Route = createFileRoute("/")({
@@ -180,67 +191,67 @@ function HomePage() {
         </div>
       </section>
 
-      {/* WHY US */}
+      {/* WHY ME */}
       <section className="border-y border-border bg-panel/20 px-6 py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-          <div>
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-14 text-center">
             <span className="font-mono text-[12px] font-bold uppercase tracking-[0.3em] text-brand">
-              // Por que escolher
+              // Diferenciais
             </span>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-              Tecnologia que entrega <span className="text-brand">resultado</span>.
+            <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">
+              Por que escolher{" "}
+              <span className="text-brand glow-text">Gustavo Rocha Machado?</span>
             </h2>
-            <p className="mt-6 text-foreground/60">
-              Combinamos formação técnica sólida em desenvolvimento de sistemas com a
-              graduação em Engenharia de Software para entregar projetos web modernos,
-              performáticos e alinhados ao crescimento do seu negócio.
+            <p className="mx-auto mt-6 max-w-2xl text-foreground/60">
+              Formação sólida, experiência prática e foco em resultados para entregar
+              soluções web que realmente impulsionam o seu negócio.
             </p>
-
-            <ul className="mt-8 space-y-4">
-              {[
-                "Atendimento próximo e personalizado em cada etapa",
-                "Sites responsivos e otimizados para mecanismos de busca",
-                "Código limpo, escalável e fácil de manter",
-                "Entrega no prazo combinado, sem surpresas",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-brand" />
-                  <span className="text-foreground/80">{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
 
-          <div className="dashboard-border relative overflow-hidden bg-panel/40 p-8 backdrop-blur-sm">
-            <div className="mb-6 flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-foreground/40">
-                Stack Principal
-              </span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-brand">
-                Pronta para produção
-              </span>
-            </div>
-            <div className="space-y-5">
-              {[
-                { label: "PHP / Backend", value: 80 },
-                { label: "JavaScript", value: 75 },
-                { label: "HTML / CSS", value: 90 },
-                { label: "MySQL / Banco de Dados", value: 78 },
-              ].map((s) => (
-                <div key={s.label} className="space-y-2">
-                  <div className="flex justify-between font-mono text-xs uppercase">
-                    <span>{s.label}</span>
-                    <span className="text-brand">{s.value}%</span>
-                  </div>
-                  <div className="h-1 bg-foreground/5">
-                    <div
-                      className="h-full origin-left animate-[bar_1.4s_cubic-bezier(0.22,1,0.36,1)_both] bg-brand shadow-[0_0_8px_oklch(0.62_0.21_255/0.6)]"
-                      style={{ width: `${s.value}%` }}
-                    />
-                  </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: GraduationCap,
+                title: "Formação Sólida",
+                desc: "Estudante de Engenharia de Software e Técnico em Desenvolvimento de Sistemas pelo IFRS, garantindo uma base robusta e conhecimento atualizado.",
+              },
+              {
+                icon: Briefcase,
+                title: "Experiência Prática",
+                desc: "Atuação em suporte N2 e manutenção de sistemas no CANOASTEC, desenvolvendo habilidades de resolução de problemas e visão sistêmica.",
+              },
+              {
+                icon: Target,
+                title: "Foco em Resultados",
+                desc: "Comprometimento com a entrega de soluções que realmente impulsionam o seu negócio, com design moderno e funcionalidade impecável.",
+              },
+              {
+                icon: Cpu,
+                title: "Tecnologias Modernas",
+                desc: "Domínio de JavaScript, PHP, HTML, CSS, MySQL, APIs REST, Git e GitHub para construir projetos robustos e escaláveis.",
+              },
+              {
+                icon: Wallet,
+                title: "Investimento Acessível",
+                desc: "Soluções de alta qualidade com excelente custo-benefício e condições de pagamento flexíveis, viabilizando o seu projeto digital.",
+              },
+              {
+                icon: Rocket,
+                title: "Entrega no Prazo",
+                desc: "Atendimento próximo e personalizado em cada etapa do projeto, com cronograma claro e entrega dentro do combinado, sem surpresas.",
+              },
+            ].map((item) => (
+              <article
+                key={item.title}
+                className="dashboard-border group bg-background/40 p-7 transition-all duration-300 hover:bg-brand/5"
+              >
+                <div className="mb-5 inline-flex size-12 items-center justify-center rounded border border-brand/30 bg-brand/10 text-brand transition-transform group-hover:scale-110">
+                  <item.icon className="size-5" />
                 </div>
-              ))}
-            </div>
+                <h3 className="mb-3 text-lg font-bold text-brand-deep">{item.title}</h3>
+                <p className="text-sm leading-relaxed text-foreground/65">{item.desc}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
