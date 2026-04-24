@@ -8,12 +8,12 @@ export const Route = createFileRoute("/habilidades")({
       {
         name: "description",
         content:
-          "Stack técnica completa de Gustavo Rocha Machado: backend, cloud, frontend e arquitetura de software.",
+          "Habilidades técnicas de Gustavo Rocha Machado: JavaScript, PHP, HTML, CSS, MySQL, APIs REST, Git e GitHub.",
       },
       { property: "og:title", content: "Habilidades — Gustavo Rocha Machado" },
       {
         property: "og:description",
-        content: "Stack técnica e domínios de atuação como desenvolvedor de sistemas.",
+        content: "Linguagens, front-end, back-end e ferramentas de Gustavo Rocha Machado.",
       },
     ],
   }),
@@ -23,39 +23,40 @@ export const Route = createFileRoute("/habilidades")({
 const groups = [
   {
     code: "01",
-    title: "Backend & APIs",
-    desc: "Construção de APIs resilientes e microsserviços de alto throughput.",
-    items: ["Node.js", "TypeScript", "Python", "Go", "REST", "GraphQL"],
+    title: "Linguagens",
+    desc: "Linguagens de programação que utilizo para construir lógica e funcionalidades.",
+    items: [
+      { name: "JavaScript", level: 75 },
+      { name: "PHP", level: 80 },
+    ],
   },
   {
     code: "02",
-    title: "Cloud & DevOps",
-    desc: "Infraestrutura como código e pipelines CI/CD em provedores cloud.",
-    items: ["AWS", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
+    title: "Front-end",
+    desc: "Tecnologias para construção de interfaces web acessíveis e responsivas.",
+    items: [
+      { name: "HTML", level: 92 },
+      { name: "CSS", level: 88 },
+    ],
   },
   {
     code: "03",
-    title: "Bancos de Dados",
-    desc: "Modelagem relacional, NoSQL e otimização de consultas em escala.",
-    items: ["PostgreSQL", "Redis", "MongoDB", "DynamoDB"],
+    title: "Back-end",
+    desc: "Construção de APIs, integração com banco de dados e regras de negócio.",
+    items: [
+      { name: "PHP", level: 80 },
+      { name: "MySQL", level: 78 },
+      { name: "APIs REST", level: 72 },
+    ],
   },
   {
     code: "04",
-    title: "Frontend Engineering",
-    desc: "Interfaces performáticas com foco em Core Web Vitals.",
-    items: ["React", "Next.js", "TanStack", "Tailwind CSS"],
-  },
-  {
-    code: "05",
-    title: "Arquitetura",
-    desc: "Microsserviços, event-driven, DDD e clean architecture.",
-    items: ["Microservices", "Event-Driven", "DDD", "Clean Arch"],
-  },
-  {
-    code: "06",
-    title: "Qualidade & Segurança",
-    desc: "Testes automatizados, observabilidade e práticas seguras.",
-    items: ["Jest", "Vitest", "OAuth2", "OWASP", "Datadog"],
+    title: "Ferramentas",
+    desc: "Versionamento de código e colaboração em projetos.",
+    items: [
+      { name: "Git", level: 80 },
+      { name: "GitHub", level: 80 },
+    ],
   },
 ];
 
@@ -64,16 +65,16 @@ function SkillsPage() {
     <section className="px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="// System Capabilities"
-          title="Arsenal Tecnológico"
-          description="Ferramentas selecionadas pela escalabilidade, segurança e performance bruta em ambientes corporativos."
+          eyebrow="// Stack Técnica"
+          title="Habilidades"
+          description="Tecnologias que aprendi durante a formação técnica e que continuo aprofundando na graduação."
         />
 
-        <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-2">
           {groups.map((g) => (
             <div
               key={g.code}
-              className="group bg-background p-10 transition-colors hover:bg-brand/5"
+              className="group flex flex-col bg-background p-10 transition-colors hover:bg-brand/5"
             >
               <div className="mb-6 flex items-center justify-between">
                 <span className="font-mono text-[10px] uppercase tracking-widest text-brand">
@@ -81,20 +82,39 @@ function SkillsPage() {
                 </span>
                 <div className="size-2 rounded-full bg-brand opacity-50 transition-opacity group-hover:opacity-100" />
               </div>
-              <h4 className="mb-3 text-xl font-bold">{g.title}</h4>
-              <p className="mb-6 text-sm leading-relaxed text-foreground/50">{g.desc}</p>
-              <div className="flex flex-wrap gap-2">
-                {g.items.map((i) => (
-                  <span
-                    key={i}
-                    className="border border-border px-2 py-1 font-mono text-[11px] text-foreground/70"
-                  >
-                    {i}
-                  </span>
+              <h4 className="mb-3 text-2xl font-bold">{g.title}</h4>
+              <p className="mb-8 text-sm leading-relaxed text-foreground/50">{g.desc}</p>
+
+              <div className="mt-auto space-y-4">
+                {g.items.map((item) => (
+                  <div key={item.name} className="space-y-2">
+                    <div className="flex justify-between font-mono text-xs uppercase">
+                      <span>{item.name}</span>
+                      <span className="text-brand">{item.level}%</span>
+                    </div>
+                    <div className="h-1 bg-foreground/5">
+                      <div
+                        className="h-full origin-left animate-[bar_1.4s_cubic-bezier(0.22,1,0.36,1)_both] bg-brand shadow-[0_0_8px_oklch(0.62_0.21_255/0.5)]"
+                        style={{ width: `${item.level}%` }}
+                      />
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Soft note */}
+        <div className="dashboard-border mt-12 bg-panel/20 p-8 text-sm text-foreground/60">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-brand">
+            // Em estudo
+          </span>
+          <p className="mt-3">
+            Atualmente aprofundando conhecimentos em frameworks JavaScript modernos,
+            boas práticas de arquitetura de software e desenvolvimento de APIs RESTful
+            mais robustas.
+          </p>
         </div>
       </div>
     </section>
