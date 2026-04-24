@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe, Rocket, Code2, Wrench, ArrowRight, CheckCircle2 } from "lucide-react";
+import servicesBgVideo from "@/assets/services-bg.mp4";
 
 export const Route = createFileRoute("/servicos")({
   head: () => ({
@@ -54,7 +55,20 @@ const services = [
 
 function ServicesPage() {
   return (
-    <div className="pt-32">
+    <div className="relative pt-32">
+      {/* VIDEO BACKGROUND */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <video
+          src={servicesBgVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="size-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/90" />
+      </div>
+
       {/* HEADER */}
       <section className="px-6 pb-16">
         <div className="mx-auto max-w-7xl text-center">
