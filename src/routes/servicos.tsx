@@ -64,9 +64,10 @@ function ServicesPage() {
           loop
           muted
           playsInline
-          className="size-full object-cover opacity-20"
+          className="size-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95" />
+        <div className="absolute inset-0 bg-background/40" />
       </div>
 
       {/* HEADER */}
