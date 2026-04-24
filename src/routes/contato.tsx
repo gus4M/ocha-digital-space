@@ -1,15 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Mail, MessageCircle, Linkedin } from "lucide-react";
 import { SectionHeading } from "../components/SectionHeading";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Gustavo Rocha Machado" },
+      { title: "Fale Comigo — Gustavo Rocha Machado" },
       {
         name: "description",
-        content: "Entre em contato com Gustavo Rocha Machado para colaborações e oportunidades.",
+        content:
+          "Entre em contato com Gustavo Rocha Machado por email, WhatsApp ou LinkedIn para oportunidades de estágio e desenvolvimento.",
       },
-      { property: "og:title", content: "Contato — Gustavo Rocha Machado" },
+      { property: "og:title", content: "Fale Comigo — Gustavo Rocha Machado" },
       {
         property: "og:description",
         content: "Canais de contato profissional de Gustavo Rocha Machado.",
@@ -20,9 +22,24 @@ export const Route = createFileRoute("/contato")({
 });
 
 const channels = [
-  { label: "Email", value: "gustavo@exemplo.com", href: "mailto:gustavo@exemplo.com" },
-  { label: "LinkedIn", value: "/in/gustavo-rocha-machado", href: "#" },
-  { label: "GitHub", value: "@gustavomachado", href: "#" },
+  {
+    label: "Email",
+    value: "gugarochamachado@gmail.com",
+    href: "mailto:gugarochamachado@gmail.com",
+    Icon: Mail,
+  },
+  {
+    label: "WhatsApp",
+    value: "(51) 99324-2572",
+    href: "https://wa.me/5551993242572",
+    Icon: MessageCircle,
+  },
+  {
+    label: "LinkedIn",
+    value: "/in/gustavo-machado2026",
+    href: "https://www.linkedin.com/in/gustavo-machado2026",
+    Icon: Linkedin,
+  },
 ];
 
 function ContactPage() {
@@ -31,8 +48,8 @@ function ContactPage() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="// Initialize Communication"
-          title="Vamos construir algo sólido."
-          description="Disponível para projetos freelance, posições full-time e consultoria técnica."
+          title="Fale Comigo."
+          description="Disponível para oportunidades de estágio, vagas júnior e projetos colaborativos."
         />
 
         <div className="grid gap-12 lg:grid-cols-12">
@@ -54,7 +71,7 @@ function ContactPage() {
               </label>
               <textarea
                 rows={6}
-                placeholder="Conte um pouco sobre o projeto..."
+                placeholder="Conte um pouco sobre a oportunidade ou projeto..."
                 className="w-full border border-border bg-background/40 px-4 py-3 text-sm outline-none transition-colors focus:border-brand"
               />
             </div>
@@ -68,17 +85,24 @@ function ContactPage() {
 
           {/* Channels */}
           <aside className="space-y-4 lg:col-span-5">
-            {channels.map((c) => (
+            {channels.map(({ label, value, href, Icon }) => (
               <a
-                key={c.label}
-                href={c.href}
-                className="dashboard-border group block bg-panel/20 p-6 transition-colors hover:bg-brand/5"
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
+                className="dashboard-border group flex items-center gap-5 bg-panel/20 p-6 transition-colors hover:bg-brand/5"
               >
-                <div className="font-mono text-[10px] uppercase tracking-widest text-brand">
-                  {c.label}
+                <div className="flex size-12 shrink-0 items-center justify-center border border-border bg-background/60 text-brand transition-colors group-hover:border-brand">
+                  <Icon className="size-5" />
                 </div>
-                <div className="mt-2 text-lg font-semibold transition-colors group-hover:text-brand">
-                  {c.value}
+                <div className="min-w-0 flex-1">
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-brand">
+                    {label}
+                  </div>
+                  <div className="mt-1 truncate text-base font-semibold transition-colors group-hover:text-brand">
+                    {value}
+                  </div>
                 </div>
               </a>
             ))}
@@ -89,7 +113,7 @@ function ContactPage() {
               </div>
               <div className="mt-2 flex items-center gap-2 text-base font-semibold">
                 <span className="size-2 rounded-full bg-brand" />
-                Disponível para novos projetos
+                Disponível para estágio e vagas júnior
               </div>
               <p className="mt-3 text-sm text-foreground/50">
                 Resposta em até 24 horas em dias úteis.
