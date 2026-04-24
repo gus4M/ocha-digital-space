@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Globe, Rocket, Code2, Wrench, ArrowRight, CheckCircle2 } from "lucide-react";
+import servicesBgVideo from "@/assets/services-bg.mp4";
 
 export const Route = createFileRoute("/servicos")({
   head: () => ({
