@@ -218,17 +218,17 @@ function HomePage() {
               {
                 icon: Briefcase,
                 title: "Experiência Prática",
-                desc: "Atuação em suporte N2 e manutenção de sistemas no CANOASTEC, desenvolvendo habilidades de resolução de problemas e visão sistêmica.",
+                desc: "Atuação estratégica no time de desenvolvimento de softwares da Prefeitura de Canoas, no Canoastec. Lá, aprimorei minhas habilidades em resolução de desafios complexos e na criação de soluções digitais que impactam diretamente a vida dos cidadãos.",
               },
               {
                 icon: Target,
                 title: "Foco em Resultados",
-                desc: "Comprometimento com a entrega de soluções que realmente impulsionam o seu negócio, com design moderno e funcionalidade impecável.",
+                desc: "Meu compromisso vai além do código. Eu me dedico a entender a sua visão e transformá-la em uma realidade digital que não só impulsiona seu negócio, mas também encanta seus clientes. Cada projeto é uma parceria, onde sua satisfação e o sucesso do seu empreendimento são a minha maior motivação.",
               },
               {
                 icon: Cpu,
                 title: "Tecnologias Modernas",
-                desc: "Domínio de JavaScript, PHP, HTML, CSS, MySQL, APIs REST, Git e GitHub para construir projetos robustos e escaláveis.",
+                desc: "Domínio de tecnologias de ponta como React, Next.js, TypeScript, Node.js, GraphQL, AWS, Docker, PostgreSQL e Tailwind CSS. Ferramentas que garantem a construção de soluções digitais robustas, escaláveis e com performance excepcional para o seu negócio.",
               },
               {
                 icon: Wallet,
