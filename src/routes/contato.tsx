@@ -43,7 +43,7 @@ const channels = [
   {
     label: "LinkedIn",
     value: "Conectar no LinkedIn",
-    href: "https://www.linkedin.com/in/gustavo-machado2026",
+    href: "https://www.linkedin.com/in/gustavo-rocha-machado2026",
     Icon: Linkedin,
     cta: "Ver perfil",
   },
