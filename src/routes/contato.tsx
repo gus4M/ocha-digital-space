@@ -72,126 +72,40 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* CONTENT */}
       <section className="px-6 pb-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-12">
-            {/* Form */}
-            <form
-              className="dashboard-border space-y-6 bg-panel/30 p-8 lg:col-span-7 lg:p-10"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
-              <div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-brand">
-                  // Formulário de contato
-                </div>
-                <h2 className="mt-2 text-2xl font-bold">Solicite um orçamento gratuito</h2>
-                <p className="mt-2 text-sm text-foreground/55">
-                  Preencha o formulário abaixo e retorno o contato em breve.
-                </p>
-              </div>
+        <div className="mx-auto max-w-5xl">
+          <div className="dashboard-border bg-panel/25 px-6 py-10 text-center shadow-panel md:px-10 md:py-14">
+            <div className="mx-auto inline-flex items-center justify-center gap-3 text-xl font-bold md:text-3xl">
+              <span className="size-4 shrink-0 animate-pulse rounded-full bg-status-available shadow-status" />
+              <span>Disponível para novos projetos • Resposta em até 24h</span>
+            </div>
+          </div>
 
-              <div className="grid gap-6 md:grid-cols-2">
-                <Field label="Nome" name="name" placeholder="Seu nome completo" />
-                <Field
-                  label="Email"
-                  name="email"
-                  type="email"
-                  placeholder="voce@empresa.com"
-                />
-              </div>
-              <div className="grid gap-6 md:grid-cols-2">
-                <Field
-                  label="Telefone"
-                  name="phone"
-                  type="tel"
-                  placeholder="(51) 99999-9999"
-                />
-                <Field
-                  label="Assunto"
-                  name="subject"
-                  placeholder="Site, landing page, sistema..."
-                />
-              </div>
-              <div>
-                <label className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-foreground/50">
-                  Mensagem
-                </label>
-                <textarea
-                  rows={6}
-                  placeholder="Conte um pouco sobre o seu projeto, prazo e objetivos..."
-                  className="w-full border border-border bg-background/40 px-4 py-3 text-sm outline-none transition-colors focus:border-brand"
-                />
-              </div>
-              <button
-                type="submit"
-                className="inline-flex items-center gap-2 bg-brand px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-glow transition-colors hover:bg-brand-deep"
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {channels.map(({ label, value, href, Icon, cta, highlight }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
+                className={`dashboard-border group flex min-h-40 flex-col items-center justify-center gap-4 px-6 py-8 text-center transition-colors ${
+                  highlight ? "bg-brand/15 hover:bg-brand/25" : "bg-panel/25 hover:bg-brand/10"
+                }`}
               >
-                Enviar mensagem <Send className="size-4" />
-              </button>
-            </form>
-
-            {/* Channels */}
-            <aside className="space-y-4 lg:col-span-5">
-              <div className="dashboard-border bg-panel/20 p-6">
-                <div className="font-mono text-[10px] uppercase tracking-widest text-foreground/40">
-                  Status
+                <div className="flex size-14 items-center justify-center border border-brand bg-background/60 text-brand transition-colors group-hover:bg-brand group-hover:text-primary-foreground">
+                  <Icon className="size-6" />
                 </div>
-                <div className="mt-2 flex items-center gap-2 text-base font-semibold">
-                  <span className="size-2 rounded-full bg-brand" />
-                  Disponível para novos projetos
-                </div>
-                <p className="mt-3 text-sm text-foreground/55">
-                  Resposta em até 24 horas em dias úteis. Orçamento sem compromisso.
-                </p>
-              </div>
-
-              {channels.map(({ label, value, href, Icon, cta, highlight }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith("http") ? "_blank" : undefined}
-                  rel={href.startsWith("http") ? "noreferrer" : undefined}
-                  className={`dashboard-border group flex items-center gap-5 p-6 transition-colors ${
-                    highlight
-                      ? "bg-brand/10 hover:bg-brand/15"
-                      : "bg-panel/20 hover:bg-brand/5"
-                  }`}
-                >
-                  <div
-                    className={`flex size-12 shrink-0 items-center justify-center border bg-background/60 transition-colors ${
-                      highlight
-                        ? "border-brand text-brand"
-                        : "border-border text-brand group-hover:border-brand"
-                    }`}
-                  >
-                    <Icon className="size-5" />
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-brand">
+                    {label}
                   </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="font-mono text-[10px] uppercase tracking-widest text-brand">
-                      {label}
-                    </div>
-                    <div className="mt-1 truncate text-base font-semibold transition-colors group-hover:text-brand">
-                      {value}
-                    </div>
-                  </div>
-                  <div className="hidden font-mono text-[10px] uppercase tracking-widest text-brand sm:block">
+                  <div className="mt-2 text-lg font-bold">{value}</div>
+                  <div className="mt-3 font-mono text-[10px] uppercase tracking-widest text-foreground/55 transition-colors group-hover:text-brand">
                     {cta} →
                   </div>
-                </a>
-              ))}
-
-              <a
-                href="https://wa.me/5551993242572?text=Ol%C3%A1%20Gustavo%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-center gap-2 bg-brand px-6 py-4 font-mono text-xs font-bold uppercase tracking-widest text-primary-foreground shadow-glow transition-colors hover:bg-brand-deep"
-              >
-                <Phone className="size-4" /> Falar no WhatsApp agora
+                </div>
               </a>
-            </aside>
+            ))}
           </div>
         </div>
       </section>
@@ -199,32 +113,3 @@ function ContactPage() {
   );
 }
 
-function Field({
-  label,
-  name,
-  type = "text",
-  placeholder,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  placeholder?: string;
-}) {
-  return (
-    <div>
-      <label
-        htmlFor={name}
-        className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-foreground/50"
-      >
-        {label}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        className="w-full border border-border bg-background/40 px-4 py-3 text-sm outline-none transition-colors focus:border-brand"
-      />
-    </div>
-  );
-}
