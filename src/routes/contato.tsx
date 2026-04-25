@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MessageCircle, Linkedin, Send, Phone } from "lucide-react";
+import { Mail, MessageCircle, Linkedin } from "lucide-react";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
@@ -34,18 +34,18 @@ const channels = [
   },
   {
     label: "WhatsApp",
-    value: "(51) 99324-2572",
-    href: "https://wa.me/5551993242572?text=Ol%C3%A1%20Gustavo%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.",
+    value: "Falar no WhatsApp",
+    href: "https://wa.me/5551993242572",
     Icon: MessageCircle,
-    cta: "Falar no WhatsApp",
+    cta: "Abrir conversa",
     highlight: true,
   },
   {
     label: "LinkedIn",
-    value: "/in/gustavo-machado2026",
+    value: "Conectar no LinkedIn",
     href: "https://www.linkedin.com/in/gustavo-machado2026",
     Icon: Linkedin,
-    cta: "Conectar",
+    cta: "Ver perfil",
   },
 ];
 
