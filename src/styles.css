@@ -132,4 +132,29 @@
       linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
     background-size: 48px 48px;
   }
+  .glass-panel {
+    background: color-mix(in oklab, var(--panel) 58%, transparent);
+    border: 1px solid oklch(1 0 0 / 0.1);
+    box-shadow: 0 24px 50px -32px oklch(0 0 0 / 0.75);
+    backdrop-filter: blur(16px);
+  }
+  .reveal-up {
+    animation: var(--animate-fade-up);
+    animation-timeline: view();
+    animation-range: entry 8% cover 28%;
+  }
+  .smooth-hover {
+    transition-property: transform, border-color, background-color, box-shadow, color;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
