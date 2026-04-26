@@ -74,7 +74,7 @@ function SkillsPage() {
           {groups.map((g) => (
             <div
               key={g.code}
-              className="group flex flex-col bg-background p-10 transition-colors hover:bg-brand/5"
+              className="glass-panel smooth-hover reveal-up group flex flex-col p-10 hover:-translate-y-1 hover:border-brand/40 hover:bg-brand/5"
             >
               <div className="mb-6 flex items-center justify-between">
                 <span className="font-mono text-[10px] uppercase tracking-widest text-brand">
@@ -106,7 +106,7 @@ function SkillsPage() {
         </div>
 
         {/* Soft note */}
-        <div className="dashboard-border mt-12 bg-panel/20 p-8 text-sm text-foreground/60">
+        <div className="glass-panel reveal-up mt-12 p-8 text-sm text-foreground/60">
           <span className="font-mono text-[10px] uppercase tracking-widest text-brand">
             // Em estudo
           </span>
