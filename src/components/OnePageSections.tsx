@@ -77,24 +77,6 @@ const formacao = [
   },
 ];
 
-const experiencia = [
-  {
-    role: "Desenvolvedor Estagiário — Time de Desenvolvimento de Software",
-    company: "CANOASTEC",
-    desc: "Atuação no desenvolvimento e manutenção de softwares para a Prefeitura de Canoas, com foco em resolução de desafios complexos, otimização de sistemas e implementação de novas funcionalidades. Contribuição ativa para a operação de TI, aprimorando hard skills e soft skills essenciais para a entrega de soluções de alto impacto.",
-  },
-  {
-    role: "Freelancer — Design e Tráfego Pago",
-    company: "Projetos próprios",
-    desc: "Atendimento a clientes em projetos de design gráfico, identidade visual e gestão de campanhas de tráfego pago em plataformas digitais.",
-  },
-  {
-    role: "Trabalhos temporários — Atendimento ao público",
-    company: "Diversos",
-    desc: "Experiência em comunicação, trabalho em equipe e resolução de problemas em ambientes dinâmicos de atendimento.",
-  },
-];
-
 const channels = [
   {
     label: "Email",
@@ -283,21 +265,6 @@ export function PortfolioSection() {
         </article>
       </div>
 
-      <div className="mx-auto mt-20 max-w-7xl">
-        <div className="dashboard-border bg-panel/20 p-10 text-center">
-          <div className="font-mono text-[10px] uppercase tracking-widest text-brand">
-            // Em construção
-          </div>
-          <h3 className="mt-3 text-2xl font-bold">Mais cases em breve</h3>
-          <p className="mx-auto mt-3 max-w-md text-sm text-foreground/55">
-            Novos projetos pessoais e de clientes serão publicados aqui em breve. Quer
-            ser um dos próximos cases?
-          </p>
-          <a href="#contato" className="mt-6 inline-flex items-center gap-2 bg-brand px-6 py-3 font-mono text-xs font-bold uppercase tracking-widest text-primary-foreground transition-colors hover:bg-brand-deep">
-            Iniciar meu projeto <ArrowRight className="size-3.5" />
-          </a>
-        </div>
-      </div>
     </section>
   );
 }
@@ -316,30 +283,18 @@ export function AboutSection() {
           <div className="lg:col-span-7">
             <p className="text-2xl font-light leading-relaxed text-foreground/80">
               Olá! Sou <span className="font-semibold text-foreground">Gustavo Rocha Machado</span>, um desenvolvedor web
-              apaixonado por transformar ideias complexas em <span className="text-brand">soluções digitais robustas</span> e funcionais.
+              focado em transformar ideias complexas em <span className="text-brand">soluções digitais robustas</span> e funcionais.
             </p>
 
             <div className="mt-10 space-y-6 text-foreground/60">
               <p>
-                Com uma sólida base técnica, minha jornada no mundo da tecnologia começou
-                com a formação em Desenvolvimento de Sistemas no IFRS, onde aprofundei
-                meus conhecimentos em programação, banco de dados e desenvolvimento web.
-                Atualmente, estou aprimorando essa expertise no Bacharelado em Engenharia
-                de Software pela Universidade La Salle, focado em arquitetura de sistemas
-                e metodologias ágeis.
+                Minha base técnica foi construída através da formação em <strong className="font-semibold text-foreground">Desenvolvimento de Sistemas pelo IFRS</strong>,
+                onde me especializei em lógica de programação, banco de dados e desenvolvimento web. Atualmente, aprofundo minha expertise no <strong className="font-semibold text-foreground">Bacharelado em Engenharia de Software pela Universidade La Salle</strong>,
+                com foco em arquitetura de sistemas de alto desempenho e metodologias ágeis de desenvolvimento.
               </p>
               <p>
-                Minha experiência prática inclui atuação no time de desenvolvimento de
-                softwares da Prefeitura de Canoas, no CANOASTEC, onde contribuí para a
-                criação e manutenção de sistemas que impactam diretamente a comunidade.
-                Além disso, trago uma visão estratégica de mercado, desenvolvida através
-                de projetos como freelancer em design e tráfego pago, e aprimorada por
-                experiências em atendimento ao público, que me ensinaram a importância da
-                comunicação clara e do foco no cliente.
-              </p>
-              <p>
-                Estou pronto para aplicar meu conhecimento e paixão para construir o
-                próximo grande projeto do seu negócio.
+                Minha trajetória é marcada pela união entre o rigor técnico da engenharia e uma visão estratégica de mercado,
+                garantindo que cada projeto seja desenvolvido com foco em escalabilidade e na melhor experiência para o usuário final.
               </p>
             </div>
           </div>
@@ -367,24 +322,6 @@ export function AboutSection() {
                 ))}
               </ol>
             </div>
-          </div>
-        </div>
-
-        <div className="mt-24">
-          <h3 className="mb-10 font-mono text-xs uppercase tracking-widest text-brand-deep">
-            // Experiência Profissional
-          </h3>
-          <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-3">
-            {experiencia.map((e) => (
-              <div key={e.role} className="group bg-background p-8 transition-colors hover:bg-brand/5">
-                <div className="mb-4 flex size-10 items-center justify-center rounded border border-brand/20 bg-brand/10 transition-transform group-hover:scale-110">
-                  <div className="size-2 rounded-full bg-brand" />
-                </div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-brand">{e.company}</div>
-                <h4 className="mt-2 text-lg font-bold">{e.role}</h4>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/60">{e.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
