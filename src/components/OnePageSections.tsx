@@ -118,7 +118,7 @@ export function ServicesSection() {
       </div>
 
       <div className="relative mx-auto max-w-7xl">
-        <div className="mb-16 text-center">
+        <div className="reveal-up mb-16 text-center">
           <span className="font-mono text-[12px] font-bold uppercase tracking-[0.3em] text-brand">
             // O que oferecemos
           </span>
@@ -137,7 +137,7 @@ export function ServicesSection() {
           {serviceItems.map((s) => (
             <article
               key={s.title}
-              className="dashboard-border group relative overflow-hidden bg-panel/40 p-8 transition-all duration-300 hover:bg-brand/5"
+              className="glass-panel smooth-hover reveal-up group relative overflow-hidden p-8 hover:-translate-y-1 hover:border-brand/40 hover:bg-brand/5 hover:shadow-glow"
             >
               <div className="mb-6 inline-flex size-14 items-center justify-center rounded border border-brand/30 bg-brand/10 text-brand transition-transform group-hover:scale-110">
                 <s.icon className="size-6" />
@@ -186,7 +186,7 @@ export function PortfolioSection() {
       </div>
 
       <div className="mx-auto mt-16 max-w-7xl">
-        <article className="dashboard-border group relative overflow-hidden bg-panel/40">
+        <article className="glass-panel smooth-hover reveal-up group relative overflow-hidden hover:-translate-y-1 hover:border-brand/40 hover:shadow-glow">
           <div className="grid gap-0 lg:grid-cols-12">
             <div className="relative overflow-hidden border-b border-border bg-gradient-to-br from-brand/15 via-panel/60 to-brand-deep/20 p-10 lg:col-span-5 lg:border-b-0 lg:border-r">
               <div className="grid-bg absolute inset-0 opacity-30" aria-hidden />
@@ -280,7 +280,7 @@ export function AboutSection() {
         />
 
         <div className="grid gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-7">
+            <div className="reveal-up lg:col-span-7">
             <p className="text-2xl font-light leading-relaxed text-foreground/80">
               Olá! Sou <span className="font-semibold text-foreground">Gustavo Rocha Machado</span>, um desenvolvedor web
               focado em transformar ideias complexas em <span className="text-brand">soluções digitais robustas</span> e funcionais.
@@ -292,15 +292,11 @@ export function AboutSection() {
                 onde me especializei em lógica de programação, banco de dados e desenvolvimento web. Atualmente, aprofundo minha expertise no <strong className="font-semibold text-foreground">Bacharelado em Engenharia de Software pela Universidade La Salle</strong>,
                 com foco em arquitetura de sistemas de alto desempenho e metodologias ágeis de desenvolvimento.
               </p>
-              <p>
-                Minha trajetória é marcada pela união entre o rigor técnico da engenharia e uma visão estratégica de mercado,
-                garantindo que cada projeto seja desenvolvido com foco em escalabilidade e na melhor experiência para o usuário final.
-              </p>
             </div>
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="dashboard-border bg-panel/30 p-8">
+          <div className="reveal-up lg:col-span-5">
+            <div className="glass-panel p-8">
               <h3 className="mb-8 font-mono text-xs uppercase tracking-widest text-brand">
                 Formação
               </h3>
@@ -345,7 +341,7 @@ export function ContactSection() {
       </div>
 
       <div className="mx-auto mt-16 max-w-5xl">
-        <div className="dashboard-border bg-panel/25 px-6 py-10 text-center shadow-panel md:px-10 md:py-14">
+        <div className="glass-panel reveal-up px-6 py-10 text-center shadow-panel md:px-10 md:py-14">
           <div className="mx-auto inline-flex items-center justify-center gap-3 text-xl font-bold md:text-3xl">
             <span className="size-4 shrink-0 animate-pulse rounded-full bg-status-available shadow-status" />
             <span>Disponível para novos projetos • Resposta em até 24h</span>
@@ -359,7 +355,7 @@ export function ContactSection() {
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
-              className={`dashboard-border group flex min-h-40 flex-col items-center justify-center gap-4 px-6 py-8 text-center transition-colors ${
+              className={`glass-panel smooth-hover reveal-up group flex min-h-40 flex-col items-center justify-center gap-4 px-6 py-8 text-center hover:-translate-y-1 hover:border-brand/40 ${
                 highlight ? "bg-brand/15 hover:bg-brand/25" : "bg-panel/25 hover:bg-brand/10"
               }`}
             >
