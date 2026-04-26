@@ -282,14 +282,14 @@ export function AboutSection() {
         />
 
         <div className="grid gap-16 lg:grid-cols-12">
-            <div className="reveal-up lg:col-span-7">
-            <p className="text-2xl font-light leading-relaxed text-foreground/80">
+          <div className="lg:col-span-7">
+            <p className="reveal-up text-2xl font-light leading-relaxed text-foreground/80">
               Olá! Sou <span className="font-semibold text-foreground">Gustavo Rocha Machado</span>, um desenvolvedor web
               focado em transformar ideias complexas em <span className="text-brand">soluções digitais robustas</span> e funcionais.
             </p>
 
             <div className="mt-10 space-y-6 text-foreground/60">
-              <p>
+              <p className="reveal-up" style={{ animationDelay: "100ms" }}>
                 Minha base técnica foi construída através da formação em <strong className="font-semibold text-foreground">Desenvolvimento de Sistemas pelo IFRS</strong>,
                 onde me especializei em lógica de programação, banco de dados e desenvolvimento web. Atualmente, aprofundo minha expertise no <strong className="font-semibold text-foreground">Bacharelado em Engenharia de Software pela Universidade La Salle</strong>,
                 com foco em arquitetura de sistemas de alto desempenho e metodologias ágeis de desenvolvimento.
@@ -297,15 +297,19 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div className="reveal-up lg:col-span-5">
-            <div className="glass-panel p-8">
-              <h3 className="mb-8 font-mono text-xs uppercase tracking-widest text-brand">
+          <div className="lg:col-span-5">
+            <div className="glass-panel reveal-up p-8 shadow-panel">
+              <h3 className="reveal-up mb-8 font-mono text-xs uppercase tracking-widest text-brand">
                 Formação
               </h3>
-              <ol className="relative space-y-8 border-l border-border pl-6">
-                {formacao.map((item) => (
-                  <li key={item.title} className="relative">
-                    <span className="absolute -left-[31px] top-1 flex size-3 items-center justify-center rounded-full border border-brand bg-background">
+              <ol className="relative space-y-5 border-l border-border pl-6">
+                {formacao.map((item, index) => (
+                  <li
+                    key={item.title}
+                    className="glass-panel premium-card reveal-up relative p-5 hover:border-brand/40 hover:bg-brand/5"
+                    style={{ animationDelay: `${index * 120}ms` }}
+                  >
+                    <span className="absolute -left-[31px] top-6 flex size-3 items-center justify-center rounded-full border border-brand bg-background shadow-glow">
                       <span className="size-1 rounded-full bg-brand" />
                     </span>
                     <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-brand">
