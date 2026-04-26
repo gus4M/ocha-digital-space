@@ -77,24 +77,6 @@ const formacao = [
   },
 ];
 
-const experiencia = [
-  {
-    role: "Desenvolvedor Estagiário — Time de Desenvolvimento de Software",
-    company: "CANOASTEC",
-    desc: "Atuação no desenvolvimento e manutenção de softwares para a Prefeitura de Canoas, com foco em resolução de desafios complexos, otimização de sistemas e implementação de novas funcionalidades. Contribuição ativa para a operação de TI, aprimorando hard skills e soft skills essenciais para a entrega de soluções de alto impacto.",
-  },
-  {
-    role: "Freelancer — Design e Tráfego Pago",
-    company: "Projetos próprios",
-    desc: "Atendimento a clientes em projetos de design gráfico, identidade visual e gestão de campanhas de tráfego pago em plataformas digitais.",
-  },
-  {
-    role: "Trabalhos temporários — Atendimento ao público",
-    company: "Diversos",
-    desc: "Experiência em comunicação, trabalho em equipe e resolução de problemas em ambientes dinâmicos de atendimento.",
-  },
-];
-
 const channels = [
   {
     label: "Email",
