@@ -45,6 +45,8 @@
 
   --animate-fade-in: fade-in 0.6s ease-out both;
   --animate-fade-up: fade-up 0.7s ease-out both;
+  --animate-float-slow: float-slow 10s ease-in-out infinite;
+  --animate-soft-pulse: soft-pulse 2.8s ease-in-out infinite;
   --animate-stream: stream 3s linear infinite;
   --animate-bar: bar 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -56,6 +58,14 @@
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(14px, -18px, 0) rotate(6deg); }
+}
+@keyframes soft-pulse {
+  0%, 100% { box-shadow: 0 0 24px -8px var(--brand); }
+  50% { box-shadow: 0 0 34px -4px var(--brand); }
 }
 @keyframes stream {
   0% { background-position: 200% 0; }
@@ -111,7 +121,7 @@
 
 @layer base {
   * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -142,6 +152,48 @@
     box-shadow: 0 24px 50px -32px oklch(0 0 0 / 0.75);
     backdrop-filter: blur(16px);
   }
+  .premium-card {
+    position: relative;
+    transform: translateZ(0);
+    transition-property: transform, border-color, background-color, box-shadow;
+    transition-duration: 320ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .premium-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    border: 1px solid color-mix(in oklab, var(--brand) 55%, transparent);
+    transition: opacity 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .premium-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 28px 70px -34px var(--brand);
+  }
+  .premium-card:hover::after { opacity: 1; }
+  .hero-float {
+    animation: var(--animate-float-slow);
+    will-change: transform;
+  }
+  .premium-button {
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: transform 180ms ease, background-color 260ms ease, opacity 260ms ease, box-shadow 260ms ease;
+  }
+  .premium-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-120%);
+    background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.22), transparent);
+    transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .premium-button:hover::after { transform: translateX(120%); }
+  .premium-button:hover { animation: var(--animate-soft-pulse); }
+  .premium-button:active { transform: scale(0.97); }
   .reveal-up {
     animation: var(--animate-fade-up);
     animation-timeline: view();

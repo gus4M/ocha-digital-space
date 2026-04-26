@@ -104,7 +104,7 @@ const channels = [
 
 export function ServicesSection() {
   return (
-    <section id="servicos" className="relative scroll-mt-20 overflow-hidden px-6 py-24">
+    <section id="servicos" className="relative scroll-mt-20 overflow-hidden px-6 py-24 [transform-style:preserve-3d]">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
         <video
           src={servicesBgVideo}
@@ -112,7 +112,7 @@ export function ServicesSection() {
           loop
           muted
           playsInline
-          className="absolute inset-0 size-full object-cover opacity-90"
+          className="absolute inset-0 size-full object-cover opacity-90 saturate-75 [transform:translateZ(-1px)_scale(1.08)]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/45 via-background/25 to-background/65" />
       </div>
@@ -134,10 +134,11 @@ export function ServicesSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {serviceItems.map((s) => (
+          {serviceItems.map((s, index) => (
             <article
               key={s.title}
-              className="glass-panel smooth-hover reveal-up group relative overflow-hidden p-8 hover:-translate-y-1 hover:border-brand/40 hover:bg-brand/5 hover:shadow-glow"
+              className="glass-panel premium-card reveal-up group relative overflow-hidden p-8 hover:border-brand/40 hover:bg-brand/5"
+              style={{ animationDelay: `${index * 90}ms` }}
             >
               <div className="mb-6 inline-flex size-14 items-center justify-center rounded border border-brand/30 bg-brand/10 text-brand transition-transform group-hover:scale-110">
                 <s.icon className="size-6" />
@@ -157,7 +158,7 @@ export function ServicesSection() {
 
               <a
                 href="#contato"
-                className="inline-flex items-center gap-2 bg-brand px-5 py-3 font-mono text-xs font-bold uppercase tracking-widest text-primary-foreground transition-all hover:bg-brand-deep"
+                className="premium-button inline-flex items-center gap-2 bg-brand px-5 py-3 font-mono text-xs font-bold uppercase tracking-widest text-primary-foreground hover:bg-brand-deep"
               >
                 Solicitar Orçamento
                 <ArrowRight className="size-3.5" />
@@ -172,8 +173,9 @@ export function ServicesSection() {
 
 export function PortfolioSection() {
   return (
-    <section id="portfolio" className="scroll-mt-20 px-6 py-24">
-      <div className="mx-auto max-w-7xl text-center">
+    <section id="portfolio" className="relative scroll-mt-20 overflow-hidden px-6 py-24">
+      <div className="grid-bg pointer-events-none absolute inset-0 opacity-20 [background-attachment:fixed]" aria-hidden />
+      <div className="reveal-up relative mx-auto max-w-7xl text-center">
         <span className="font-mono text-[12px] font-bold uppercase tracking-[0.3em] text-brand">
           // Portfólio
         </span>
@@ -186,7 +188,7 @@ export function PortfolioSection() {
       </div>
 
       <div className="mx-auto mt-16 max-w-7xl">
-        <article className="glass-panel smooth-hover reveal-up group relative overflow-hidden hover:-translate-y-1 hover:border-brand/40 hover:shadow-glow">
+        <article className="glass-panel premium-card reveal-up group relative overflow-hidden hover:border-brand/40">
           <div className="grid gap-0 lg:grid-cols-12">
             <div className="relative overflow-hidden border-b border-border bg-gradient-to-br from-brand/15 via-panel/60 to-brand-deep/20 p-10 lg:col-span-5 lg:border-b-0 lg:border-r">
               <div className="grid-bg absolute inset-0 opacity-30" aria-hidden />
@@ -328,7 +330,7 @@ export function AboutSection() {
 export function ContactSection() {
   return (
     <section id="contato" className="scroll-mt-20 px-6 py-24">
-      <div className="mx-auto max-w-7xl text-center">
+      <div className="reveal-up mx-auto max-w-7xl text-center">
         <span className="font-mono text-[12px] font-bold uppercase tracking-[0.3em] text-brand">
           // Initialize Communication
         </span>
@@ -355,7 +357,7 @@ export function ContactSection() {
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
-              className={`glass-panel smooth-hover reveal-up group flex min-h-40 flex-col items-center justify-center gap-4 px-6 py-8 text-center hover:-translate-y-1 hover:border-brand/40 ${
+              className={`glass-panel premium-card reveal-up group flex min-h-40 flex-col items-center justify-center gap-4 px-6 py-8 text-center hover:border-brand/40 ${
                 highlight ? "bg-brand/15 hover:bg-brand/25" : "bg-panel/25 hover:bg-brand/10"
               }`}
             >

@@ -11,10 +11,10 @@ export function SectionHeading({ eyebrow, title, description }: Props) {
         <h2 className="mb-4 font-mono text-[12px] font-bold uppercase tracking-[0.3em] text-brand-deep">
           {eyebrow}
         </h2>
-        <h3 className="text-4xl font-bold tracking-tight md:text-5xl">{title}</h3>
+        <h3 className="reveal-up text-4xl font-bold tracking-tight md:text-5xl">{title}</h3>
       </div>
       {description && (
-        <p className="max-w-sm font-mono text-xs leading-relaxed text-foreground/40">
+        <p className="reveal-up max-w-sm font-mono text-xs leading-relaxed text-foreground/40">
           {description}
         </p>
       )}
