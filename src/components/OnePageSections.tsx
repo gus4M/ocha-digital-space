@@ -330,7 +330,7 @@ export function AboutSection() {
 export function ContactSection() {
   return (
     <section id="contato" className="scroll-mt-20 px-6 py-24">
-      <div className="mx-auto max-w-7xl text-center">
+      <div className="reveal-up mx-auto max-w-7xl text-center">
         <span className="font-mono text-[12px] font-bold uppercase tracking-[0.3em] text-brand">
           // Initialize Communication
         </span>
@@ -357,7 +357,7 @@ export function ContactSection() {
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noreferrer" : undefined}
-              className={`glass-panel smooth-hover reveal-up group flex min-h-40 flex-col items-center justify-center gap-4 px-6 py-8 text-center hover:-translate-y-1 hover:border-brand/40 ${
+              className={`glass-panel premium-card reveal-up group flex min-h-40 flex-col items-center justify-center gap-4 px-6 py-8 text-center hover:border-brand/40 ${
                 highlight ? "bg-brand/15 hover:bg-brand/25" : "bg-panel/25 hover:bg-brand/10"
               }`}
             >
