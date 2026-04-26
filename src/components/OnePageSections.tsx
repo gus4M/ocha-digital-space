@@ -130,9 +130,9 @@ export function ServicesSection() {
           loop
           muted
           playsInline
-          className="absolute inset-0 size-full object-cover opacity-40"
+          className="absolute inset-0 size-full object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/78 to-background/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/45 via-background/25 to-background/65" />
       </div>
 
       <div className="relative mx-auto max-w-7xl">
