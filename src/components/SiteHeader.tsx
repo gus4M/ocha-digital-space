@@ -15,7 +15,7 @@ export function SiteHeader() {
   useEffect(() => {
     const sections = links
       .map((link) => document.getElementById(link.href.replace("#", "")))
-      .filter(Boolean);
+      .filter((section): section is HTMLElement => section !== null);
 
     const observer = new IntersectionObserver(
       (entries) => {
