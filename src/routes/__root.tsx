@@ -3,6 +3,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 import appCss from "../styles.css?url";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
+import { WhatsAppFloatButton } from "../components/WhatsAppFloatButton";
 
 function NotFoundComponent() {
   return (
@@ -75,6 +76,7 @@ function RootComponent() {
       <main className="flex-1 pt-20">
         <Outlet />
       </main>
+      <WhatsAppFloatButton />
       <SiteFooter />
     </div>
   );

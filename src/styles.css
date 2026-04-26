@@ -30,6 +30,8 @@
   --color-ring: var(--ring);
   --color-brand: var(--brand);
   --color-brand-deep: var(--brand-deep);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
   --color-status-available: var(--status-available);
   --color-panel: var(--panel);
   --color-surface: var(--surface);
@@ -81,6 +83,8 @@
 
   --brand: oklch(0.62 0.21 255);           /* #007BFF vibrant */
   --brand-deep: oklch(0.5 0.2 255);        /* #0056b3 strong */
+  --whatsapp: oklch(0.68 0.19 149);         /* WhatsApp green */
+  --whatsapp-foreground: oklch(1 0 0);
   --status-available: oklch(0.72 0.21 145); /* #22c55e */
 
   --primary: var(--brand);
