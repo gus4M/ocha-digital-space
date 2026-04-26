@@ -278,7 +278,6 @@ export function AboutSection() {
         <SectionHeading
           eyebrow="// Perfil"
           title="Sobre Mim"
-          description="Desenvolvedor web com base técnica sólida, visão estratégica e foco em criar soluções digitais funcionais para negócios."
         />
 
         <div className="space-y-14">
