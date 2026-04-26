@@ -79,9 +79,9 @@ const formacao = [
 
 const experiencia = [
   {
-    role: "Estagiário — Suporte N2",
+    role: "Desenvolvedor Estagiário — Time de Desenvolvimento de Software",
     company: "CANOASTEC",
-    desc: "Atuação em suporte técnico de nível 2, manutenção e suporte de sistemas, atendimento a chamados internos e auxílio em rotinas de TI.",
+    desc: "Atuação no desenvolvimento e manutenção de softwares para a Prefeitura de Canoas, com foco em resolução de desafios complexos, otimização de sistemas e implementação de novas funcionalidades. Contribuição ativa para a operação de TI, aprimorando hard skills e soft skills essenciais para a entrega de soluções de alto impacto.",
   },
   {
     role: "Freelancer — Design e Tráfego Pago",
@@ -309,36 +309,37 @@ export function AboutSection() {
         <SectionHeading
           eyebrow="// Perfil"
           title="Sobre Mim"
-          description="Estudante apaixonado por tecnologia, em busca da primeira oportunidade na área de desenvolvimento."
+          description="Desenvolvedor web com base técnica sólida, visão estratégica e foco em criar soluções digitais funcionais para negócios."
         />
 
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="text-2xl font-light leading-relaxed text-foreground/80">
-              Olá, sou <span className="font-semibold text-foreground">Gustavo Rocha Machado</span>,
-              estudante de Engenharia de Software com <span className="text-brand">paixão por tecnologia</span> e
-              vontade de transformar ideias em sistemas que funcionam.
+              Olá! Sou <span className="font-semibold text-foreground">Gustavo Rocha Machado</span>, um desenvolvedor web
+              apaixonado por transformar ideias complexas em <span className="text-brand">soluções digitais robustas</span> e funcionais.
             </p>
 
             <div className="mt-10 space-y-6 text-foreground/60">
               <p>
-                Minha jornada começou na formação técnica em Desenvolvimento de
-                Sistemas no IFRS, onde aprendi os fundamentos de programação,
-                banco de dados e desenvolvimento web. Hoje, dou continuidade aos
-                estudos no Bacharelado em Engenharia de Software pela
-                Universidade La Salle.
+                Com uma sólida base técnica, minha jornada no mundo da tecnologia começou
+                com a formação em Desenvolvimento de Sistemas no IFRS, onde aprofundei
+                meus conhecimentos em programação, banco de dados e desenvolvimento web.
+                Atualmente, estou aprimorando essa expertise no Bacharelado em Engenharia
+                de Software pela Universidade La Salle, focado em arquitetura de sistemas
+                e metodologias ágeis.
               </p>
               <p>
-                Atualmente atuo como estagiário no CANOASTEC, em suporte N2 e
-                manutenção de sistemas, o que me permite vivenciar o cotidiano
-                de uma operação de TI e desenvolver hard skills e soft skills
-                essenciais para a carreira de desenvolvedor.
+                Minha experiência prática inclui atuação no time de desenvolvimento de
+                softwares da Prefeitura de Canoas, no CANOASTEC, onde contribuí para a
+                criação e manutenção de sistemas que impactam diretamente a comunidade.
+                Além disso, trago uma visão estratégica de mercado, desenvolvida através
+                de projetos como freelancer em design e tráfego pago, e aprimorada por
+                experiências em atendimento ao público, que me ensinaram a importância da
+                comunicação clara e do foco no cliente.
               </p>
               <p>
-                Também tenho experiência como freelancer em design e tráfego
-                pago, além de trabalhos temporários no atendimento ao público,
-                que me ajudaram a desenvolver comunicação, organização e foco em
-                resultado.
+                Estou pronto para aplicar meu conhecimento e paixão para construir o
+                próximo grande projeto do seu negócio.
               </p>
             </div>
           </div>
