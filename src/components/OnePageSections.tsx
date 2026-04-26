@@ -281,8 +281,8 @@ export function AboutSection() {
           description="Desenvolvedor web com base técnica sólida, visão estratégica e foco em criar soluções digitais funcionais para negócios."
         />
 
-        <div className="grid gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-7">
+        <div className="space-y-14">
+          <div className="max-w-5xl">
             <p className="reveal-up text-2xl font-light leading-relaxed text-foreground/80">
               Olá! Sou <span className="font-semibold text-foreground">Gustavo Rocha Machado</span>, um desenvolvedor web
               focado em transformar ideias complexas em <span className="text-brand">soluções digitais robustas</span> e funcionais.
@@ -297,16 +297,19 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="glass-panel reveal-up p-8 shadow-panel">
-              <h3 className="reveal-up mb-8 font-mono text-xs uppercase tracking-widest text-brand">
+          <div className="reveal-up">
+            <div className="mb-8 flex items-center gap-4">
+              <h3 className="font-mono text-xs uppercase tracking-widest text-brand">
                 Formação
               </h3>
+              <span className="h-px flex-1 bg-border" />
+            </div>
+
               <ol className="relative space-y-5 border-l border-border pl-6">
                 {formacao.map((item, index) => (
                   <li
                     key={item.title}
-                    className="glass-panel premium-card reveal-up relative p-5 hover:border-brand/40 hover:bg-brand/5"
+                    className="glass-panel premium-card reveal-up relative p-6 shadow-panel hover:border-brand/40 hover:bg-brand/5 md:p-7"
                     style={{ animationDelay: `${index * 120}ms` }}
                   >
                     <span className="absolute -left-[31px] top-6 flex size-3 items-center justify-center rounded-full border border-brand bg-background shadow-glow">
@@ -323,7 +326,6 @@ export function AboutSection() {
                   </li>
                 ))}
               </ol>
-            </div>
           </div>
         </div>
       </div>
