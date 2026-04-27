@@ -62,18 +62,18 @@ const featuredProject = {
 
 const formacao = [
   {
+    period: "2022 - 2025",
+    title: "Técnico em Desenvolvimento de Sistemas",
+    place: "IFRS",
+    desc: "Formação com base em programação, banco de dados e desenvolvimento web.",
+    status: "Concluído",
+  },
+  {
     period: "2026 – 2029",
     title: "Engenharia de Software (Bacharelado)",
     place: "Universidade La Salle",
     desc: "Graduação em andamento, com foco em engenharia de software, arquitetura de sistemas e desenvolvimento web.",
     status: "Em andamento",
-  },
-  {
-    period: "Concluído em 2025",
-    title: "Técnico em Desenvolvimento de Sistemas",
-    place: "IFRS — Instituto Federal do Rio Grande do Sul",
-    desc: "Formação técnica completa em desenvolvimento de software, banco de dados, lógica de programação e desenvolvimento web.",
-    status: "Concluído",
   },
 ];
 
