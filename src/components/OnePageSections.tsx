@@ -289,9 +289,15 @@ export function AboutSection() {
 
             <div className="mt-10 space-y-6 text-foreground/60">
               <p className="reveal-up" style={{ animationDelay: "100ms" }}>
-                Minha base técnica foi construída através da formação em <strong className="font-semibold text-foreground">Desenvolvimento de Sistemas pelo IFRS</strong>,
-                onde me especializei em lógica de programação, banco de dados e desenvolvimento web. Atualmente, aprofundo minha expertise no <strong className="font-semibold text-foreground">Bacharelado em Engenharia de Software pela Universidade La Salle</strong>,
-                com foco em arquitetura de sistemas de alto desempenho e metodologias ágeis de desenvolvimento.
+                Minha jornada técnica começou com a sólida formação em <strong className="font-semibold text-foreground">Desenvolvimento de Sistemas pelo IFRS</strong>,
+                onde adquiri os fundamentos essenciais em programação, banco de dados e desenvolvimento web. Atualmente,
+                aprofundo e expando essa expertise no <strong className="font-semibold text-foreground">Bacharelado em Engenharia de Software pela Universidade La Salle</strong>,
+                dedicando-me à arquitetura de sistemas de alto desempenho, metodologias ágeis e às mais recentes inovações em desenvolvimento web.
+              </p>
+
+              <p className="reveal-up" style={{ animationDelay: "180ms" }}>
+                Minha paixão pela tecnologia e o rigor da engenharia me impulsionam a criar soluções que não apenas funcionam,
+                mas que geram valor real e impacto positivo para os negócios.
               </p>
             </div>
           </div>
