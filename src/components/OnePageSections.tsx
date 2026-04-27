@@ -283,21 +283,16 @@ export function AboutSection() {
         <div className="space-y-14">
           <div className="max-w-5xl">
             <p className="reveal-up text-2xl font-light leading-relaxed text-foreground/80">
-              Olá! Sou <span className="font-semibold text-foreground">Gustavo Rocha Machado</span>, um desenvolvedor web
-              focado em transformar ideias complexas em <span className="text-brand">soluções digitais robustas</span> e funcionais.
+              Olá! Sou Gustavo Rocha Machado, desenvolvedor web com foco em transformar ideias em soluções digitais práticas e bem estruturadas.
             </p>
 
             <div className="mt-10 space-y-6 text-foreground/60">
               <p className="reveal-up" style={{ animationDelay: "100ms" }}>
-                Minha jornada técnica começou com a sólida formação em <strong className="font-semibold text-foreground">Desenvolvimento de Sistemas pelo IFRS</strong>,
-                onde adquiri os fundamentos essenciais em programação, banco de dados e desenvolvimento web. Atualmente,
-                aprofundo e expando essa expertise no <strong className="font-semibold text-foreground">Bacharelado em Engenharia de Software pela Universidade La Salle</strong>,
-                dedicando-me à arquitetura de sistemas de alto desempenho, metodologias ágeis e às mais recentes inovações em desenvolvimento web.
+                Minha trajetória na área começou com o curso técnico em Desenvolvimento de Sistemas pelo IFRS, onde tive minha base em programação, banco de dados e desenvolvimento web. Hoje, sigo aprofundando esse conhecimento no Bacharelado em Engenharia de Software pela Universidade La Salle, com foco em arquitetura de sistemas, metodologias ágeis e boas práticas de desenvolvimento.
               </p>
 
               <p className="reveal-up" style={{ animationDelay: "180ms" }}>
-                Minha paixão pela tecnologia e o rigor da engenharia me impulsionam a criar soluções que não apenas funcionam,
-                mas que geram valor real e impacto positivo para os negócios.
+                Gosto de trabalhar com tecnologia de forma objetiva, buscando sempre criar soluções que funcionem bem, sejam organizadas e realmente façam sentido na prática.
               </p>
             </div>
           </div>
