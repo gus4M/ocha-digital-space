@@ -62,18 +62,16 @@ const featuredProject = {
 
 const formacao = [
   {
-    period: "2022 - 2025",
+    period: "Concluído em 2025",
     title: "Técnico em Desenvolvimento de Sistemas",
-    place: "IFRS",
-    desc: "Formação com base em programação, banco de dados e desenvolvimento web.",
-    status: "Concluído",
+    place: "IFRS — Instituto Federal do Rio Grande do Sul",
+    desc: "Formação com base em programação, banco de dados, lógica de programação e desenvolvimento web.",
   },
   {
-    period: "2026 – 2029",
+    period: "2026 – 2029 • Em andamento",
     title: "Engenharia de Software (Bacharelado)",
     place: "Universidade La Salle",
     desc: "Graduação em andamento, com foco em engenharia de software, arquitetura de sistemas e desenvolvimento web.",
-    status: "Em andamento",
   },
 ];
 
@@ -274,58 +272,54 @@ export function PortfolioSection() {
 export function AboutSection() {
   return (
     <section id="sobre" className="scroll-mt-20 px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          eyebrow="// Perfil"
-          title="Sobre Mim"
-        />
+      <div className="mx-auto max-w-5xl">
+        <div className="reveal-up">
+          <SectionHeading eyebrow="// Perfil" title="Sobre Mim" />
+        </div>
 
         <div className="space-y-14">
-          <div className="max-w-5xl">
-            <p className="reveal-up text-2xl font-light leading-relaxed text-foreground/80">
+          <div className="space-y-8">
+            <p className="reveal-up text-2xl font-light leading-relaxed text-foreground/80" style={{ animationDelay: "80ms" }}>
               Olá! Sou Gustavo Rocha Machado, desenvolvedor web com foco em transformar ideias em soluções digitais práticas e bem estruturadas.
             </p>
 
-            <div className="mt-10 space-y-6 text-foreground/60 text-justify">
-              <p className="reveal-up" style={{ animationDelay: "100ms" }}>
+            <div className="space-y-6 text-justify text-foreground/60">
+              <p className="reveal-up" style={{ animationDelay: "160ms" }}>
                 Minha trajetória na área começou com o curso técnico em Desenvolvimento de Sistemas pelo IFRS, onde tive minha base em programação, banco de dados e desenvolvimento web. Hoje, sigo aprofundando esse conhecimento no Bacharelado em Engenharia de Software pela Universidade La Salle, com foco em arquitetura de sistemas, metodologias ágeis e boas práticas de desenvolvimento.
               </p>
 
-              <p className="reveal-up" style={{ animationDelay: "180ms" }}>
+              <p className="reveal-up" style={{ animationDelay: "240ms" }}>
                 Gosto de trabalhar com tecnologia de forma objetiva, buscando sempre criar soluções que funcionem bem, sejam organizadas e realmente façam sentido na prática.
               </p>
             </div>
           </div>
 
-          <div className="reveal-up">
-            <div className="mb-8 flex items-center gap-4">
+          <div>
+            <div className="reveal-up mb-8 flex items-center gap-4" style={{ animationDelay: "320ms" }}>
               <h3 className="font-mono text-xs uppercase tracking-widest text-brand">
                 Formação
               </h3>
               <span className="h-px flex-1 bg-border" />
             </div>
 
-              <ol className="relative space-y-5 border-l border-border pl-6">
-                {formacao.map((item, index) => (
-                  <li
-                    key={item.title}
-                    className="glass-panel premium-card reveal-up relative p-6 shadow-panel hover:border-brand/40 hover:bg-brand/5 md:p-7"
-                    style={{ animationDelay: `${index * 120}ms` }}
-                  >
-                    <span className="absolute -left-[31px] top-6 flex size-3 items-center justify-center rounded-full border border-brand bg-background shadow-glow">
-                      <span className="size-1 rounded-full bg-brand" />
-                    </span>
-                    <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-brand">
-                      <span>{item.period}</span>
-                      <span className="text-foreground/30">•</span>
-                      <span className="text-foreground/40">{item.status}</span>
-                    </div>
-                    <div className="mt-1 text-base font-semibold">{item.title}</div>
-                    <div className="text-sm text-foreground/40">{item.place}</div>
-                    <p className="mt-2 text-sm leading-relaxed text-foreground/60">{item.desc}</p>
-                  </li>
-                ))}
-              </ol>
+            <div className="grid gap-5 lg:grid-cols-2">
+              {formacao.map((item, index) => (
+                <article
+                  key={item.title}
+                  className="glass-panel premium-card reveal-up group flex h-full flex-col p-6 shadow-panel transition-transform duration-300 hover:-translate-y-1 hover:border-brand/40 hover:bg-brand/5 md:p-7"
+                  style={{ animationDelay: `${400 + index * 120}ms` }}
+                >
+                  <div className="mb-5 font-mono text-[10px] uppercase tracking-widest text-brand">
+                    {item.period}
+                  </div>
+                  <h4 className="text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-brand">
+                    {item.title}
+                  </h4>
+                  <div className="mt-3 text-sm text-foreground/45">{item.place}</div>
+                  <p className="mt-5 text-sm leading-relaxed text-foreground/60">{item.desc}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </div>
