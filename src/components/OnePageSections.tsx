@@ -286,7 +286,7 @@ export function AboutSection() {
               Olá! Sou Gustavo Rocha Machado, desenvolvedor web com foco em transformar ideias em soluções digitais práticas e bem estruturadas.
             </p>
 
-            <div className="mt-10 space-y-6 text-foreground/60">
+            <div className="mt-10 space-y-6 text-foreground/60 text-justify">
               <p className="reveal-up" style={{ animationDelay: "100ms" }}>
                 Minha trajetória na área começou com o curso técnico em Desenvolvimento de Sistemas pelo IFRS, onde tive minha base em programação, banco de dados e desenvolvimento web. Hoje, sigo aprofundando esse conhecimento no Bacharelado em Engenharia de Software pela Universidade La Salle, com foco em arquitetura de sistemas, metodologias ágeis e boas práticas de desenvolvimento.
               </p>
